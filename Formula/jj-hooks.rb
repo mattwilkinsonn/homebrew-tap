@@ -2,23 +2,23 @@ class JjHooks < Formula
   desc "Run pre-commit / lefthook / hk hooks against jj bookmark pushes"
   homepage "https://github.com/mattwilkinsonn/jj-hooks"
   license "Apache-2.0"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_arm do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-darwin-arm64.tar.gz"
-      sha256 "6abe078c79c0d5bcf0408c630127c0e3a4205ab4bd966490dac81839f7445390"
+      sha256 "b411fa393c81c5df4f4c1b6f4a5c3e1771837dd04c96f0b489381d63530cf6ec"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-linux-x64.tar.gz"
-      sha256 "3dd2498844fd1bc84b6893afa5e266562ef8d88a64c1a3051b321e1961ca62de"
+      sha256 "57e1c8c8873f0724cf63bc2459f12c3488f41b6804369c131454d21df898982a"
     end
     on_arm do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-linux-arm64.tar.gz"
-      sha256 "fd15e2e1220a44df11d03ed6df8f400afa4c38e9464919a4516c63a37c443cca"
+      sha256 "c329f5dbcce9e8b6c2fba615493dfde2eb7380e49781587b08ea878505d35448"
     end
   end
 
