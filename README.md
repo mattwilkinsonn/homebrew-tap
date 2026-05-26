@@ -1,4 +1,20 @@
-# homebrew-tap
+# homebrew-tap (archived)
+
+> [!IMPORTANT]
+> **This tap has been archived.** Formulae have moved into the
+> [zireael](https://github.com/mattwilkinsonn/zireael) monorepo at
+> [`tap/Formula/`](https://github.com/mattwilkinsonn/zireael/tree/main/tap/Formula).
+> The new tap path is:
+>
+> ```bash
+> brew tap mattwilkinsonn/zireael https://github.com/mattwilkinsonn/zireael
+> brew install mattwilkinsonn/zireael/<name>
+> ```
+>
+> The old `mattwilkinsonn/tap` path stops getting updates from here forward.
+> Existing installs keep working but won't see new releases until you re-tap.
+
+---
 
 Personal [Homebrew](https://brew.sh) tap. Drop formulae here as `.rb` files
 under `Formula/` and they're installable via:
