@@ -1,8 +1,11 @@
 class JjHooks < Formula
   desc "Run pre-commit / lefthook / hk hooks against jj bookmark pushes"
   homepage "https://github.com/mattwilkinsonn/jj-hooks"
-  license "Apache-2.0"
   version "0.2.1"
+  license "Apache-2.0"
+
+  # Archived: jj-hooks now ships from the zireael monorepo tap.
+  disable! date: "2026-05-26", because: "moved to the mattwilkinsonn/zireael tap"
 
   on_macos do
     on_arm do
