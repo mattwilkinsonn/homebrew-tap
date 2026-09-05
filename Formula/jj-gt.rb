@@ -7,7 +7,7 @@ class JjGt < Formula
   on_macos do
     on_arm do
       url "https://github.com/mattwilkinsonn/jj-gt/releases/download/v#{version}/jj-gt-v#{version}-darwin-arm64.tar.gz"
-      # SHA256 is bumped by .github/workflows/release.yml when a tag is pushed.
+      # SHA256 is updated by hand until the standalone release pipeline is re-pointed at this tap.
       sha256 "774fc0ef45d65e2c6238838c0f9f6b98cd43f619e37010f91046ed76852941c3"
     end
   end

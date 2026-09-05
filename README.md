@@ -9,7 +9,8 @@ brew install mattwilkinsonn/tap/jj-hooks
 brew install mattwilkinsonn/tap/jj-gt
 ```
 
-- **jj-hooks** — run pre-commit / lefthook / hk hooks against jj bookmark pushes (ships `jj-hooks` + `jj-hp`).
+- **jj-hooks** — run pre-commit / lefthook / hk hooks against jj bookmark
+  pushes (ships `jj-hooks` + `jj-hp`).
 - **jj-gt** — bridge jj bookmark stacks and Graphite (`gt`) PR stacks.
 
 Each formula's bottle URLs point at its own standalone repo's GitHub Releases.
@@ -20,23 +21,25 @@ automatically.
 ## Migrating from an older tap
 
 These tools were previously distributed from per-tool taps and from the
-`mattwilkinsonn/zireael` monorepo tap, all now retired. Tap this one and install
-first, so your tools are never in a deleted or ambiguous state:
+`mattwilkinsonn/zireael` monorepo tap, all now retired. If you installed a tool
+from one of those, uninstall it and untap the old tap *before* tapping this
+one — Homebrew refuses to install a formula of the same name from a second tap
+while the old one is still installed.
+
+```bash
+# Only for tools/taps you actually have — brew errors on an unknown keg or an
+# un-added tap. `brew tap` lists what you currently have tapped.
+brew uninstall jj-hooks jj-gt
+brew untap mattwilkinsonn/zireael
+brew untap mattwilkinsonn/jj-hooks
+brew untap mattwilkinsonn/jj-gt
+```
+
+Then tap this one and install:
 
 ```bash
 brew tap mattwilkinsonn/tap
 brew install mattwilkinsonn/tap/jj-hooks mattwilkinsonn/tap/jj-gt
 ```
 
-Then untap whichever old taps you had:
-
-```bash
-brew untap mattwilkinsonn/zireael
-brew untap mattwilkinsonn/jj-hooks
-brew untap mattwilkinsonn/jj-gt
-```
-
-If you had a tool installed from one of those taps, `brew untap` will prompt to
-uninstall it first (or refuse in a non-interactive shell) — that is expected,
-and the reinstall above has already put the current version in place. Skip any
-tap you never added; brew reports it as untapped and moves on.
+A fresh install (no older tap) just needs the two lines above.

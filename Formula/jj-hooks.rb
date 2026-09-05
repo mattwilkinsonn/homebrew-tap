@@ -7,7 +7,7 @@ class JjHooks < Formula
   on_macos do
     on_arm do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-darwin-arm64.tar.gz"
-      # SHA256 is bumped by .github/workflows/release.yml when a tag is pushed.
+      # SHA256 is updated by hand until the standalone release pipeline is re-pointed at this tap.
       sha256 "1b5ef42e1b7418426c5f8e63fc26bc1fb976f8ef5ab9acd0a1c22bd12ef339f4"
     end
   end
