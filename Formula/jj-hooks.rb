@@ -1,25 +1,25 @@
 class JjHooks < Formula
   desc "Run pre-commit / lefthook / hk hooks against jj bookmark pushes"
   homepage "https://github.com/mattwilkinsonn/jj-hooks"
-  version "0.4.0"
+  version "0.5.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-darwin-arm64.tar.gz"
       # SHA256 is updated by hand until the standalone release pipeline is re-pointed at this tap.
-      sha256 "ada5d30701e4e7dbf1e501578a1f645b6bc4b90296c9233f985ccd4680300497"
+      sha256 "7faa508e50e6a4d526b00200a229a63d8860812d374b64e01322cb5a62af4783"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-linux-x64.tar.gz"
-      sha256 "41312e85ba2bdcf50ce4c39e7cd66f8f318f1d69d35806b33f2593df6d43add2"
+      sha256 "eee270ce50313f207228cbeba3f581c6bf20c1d724c1d0196ae2e1cb9e2ce608"
     end
     on_arm do
       url "https://github.com/mattwilkinsonn/jj-hooks/releases/download/v#{version}/jj-hooks-v#{version}-linux-arm64.tar.gz"
-      sha256 "8e1ab6217559bef4ace239f083d8dad3edc2268fb609dccedc11aad046bfeffb"
+      sha256 "393ad5bc5da4a6eb0d6ca22d690dc2761a03af08d6a20a86c13cc4b3453954fe"
     end
   end
 
